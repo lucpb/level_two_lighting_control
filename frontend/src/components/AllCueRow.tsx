@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
 
-const AllCueRow: React.FC<{ headerText: string }> = ({ headerText }) => {
+const AllCueRow: React.FC<{ headerText: string, CueType: string, ParName: string }> = ({ headerText, CueType, ParName }) => {
 
   const [activeCue, setActiveCue] = useState<number | null>(null)
 

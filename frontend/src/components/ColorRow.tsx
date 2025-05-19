@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';  // for conditional class utilities
 
-const ColorRow: React.FC<{ headerText: string }> = ({ headerText }) => {
+const ColorRow: React.FC<{ headerText: string, CueType: string, ParName: string }> = ({ headerText, CueType, ParName }) => {  
 
   const [selectedColor, setSelectedColor] = useState<string>('white')
 

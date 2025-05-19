@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 
 
-const CueRow: React.FC<{ headerText: string }> = ({ headerText }) => {
+const CueRow: React.FC<{ headerText: string, CueType: string, ParName: string }> = ({ headerText, CueType, ParName }) => {
 
   const [cuesDisabled, setCuesDisabled] = useState<boolean>(false);
   const [activeCue, setActiveCue] = useState<number | null>(null);
