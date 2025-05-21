@@ -1,5 +1,5 @@
 import { useState, type FC } from 'react';
-import { WebSocketProvider } from './assets/WebSocketContext';
+import { WebSocketProvider } from './contexts/WebSocketContext';
 import HomePage from './pages/HomePage';
 import OperatePage from './pages/OperatePage';
 import EditPage    from './pages/EditPage';
@@ -8,7 +8,7 @@ const App: FC = () => {
   const [view, setView] = useState<'home'|'operate'|'edit'>('home');
 
   return (
-    <WebSocketProvider url="ws://localhost:4444">
+    <WebSocketProvider url="ws://localhost:8000/ws/lighting/">
       {view === 'home' && (
         <HomePage
           onOperate={() => setView('operate')}

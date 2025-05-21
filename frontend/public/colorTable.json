@@ -1,0 +1,33 @@
+{
+  "_comment": "Color table for Intimidator Spot 250 – 0–255 DMX and RGB values",
+  "groups": [
+    {
+      "_comment": "Primary wheel colors (000–064)",
+      "entries": [
+        { "id": 0, "name": "White",       "dmx": 0,   "rgb": [255,255,255] },
+        { "id": 1, "name": "Yellow",      "dmx": 7,   "rgb": [255,255,0]   },
+        { "id": 2, "name": "Pink",        "dmx": 14,  "rgb": [255,0,255]   },
+        { "id": 3, "name": "Green",       "dmx": 21,  "rgb": [0,255,0]     },
+        { "id": 4, "name": "Red",         "dmx": 28,  "rgb": [255,0,0]     },
+        { "id": 5, "name": "Light Blue",  "dmx": 35,  "rgb": [0,255,255]   },
+        { "id": 6, "name": "Kelly Green", "dmx": 42,  "rgb": [0,191,76]    },
+        { "id": 7, "name": "Orange",      "dmx": 49,  "rgb": [255,166,0]   },
+        { "id": 8, "name": "Dark Blue",   "dmx": 56,  "rgb": [0,0,128]     }
+      ]
+    },
+    {
+      "_comment": "Composite wheel colors (065–127)",
+      "entries": [
+        { "id": 9,  "name": "White+Yellow",         "dmx": 65,  "rgb": [255,255,128] },
+        { "id": 10, "name": "Yellow+Pink",          "dmx": 72,  "rgb": [255,128,128] },
+        { "id": 11, "name": "Pink+Green",           "dmx": 79,  "rgb": [128,128,128] },
+        { "id": 12, "name": "Green+Red",            "dmx": 86,  "rgb": [128,128,0]   },
+        { "id": 13, "name": "Red+Light Blue",       "dmx": 93,  "rgb": [128,0,128]   },
+        { "id": 14, "name": "LightBlue+KellyGreen", "dmx": 100, "rgb": [0,223,166]   },
+        { "id": 15, "name": "KellyGreen+Orange",    "dmx": 107, "rgb": [128,102,0]   },
+        { "id": 16, "name": "Orange+DarkBlue",      "dmx": 114, "rgb": [128,83,0]    },
+        { "id": 17, "name": "DarkBlue+White",       "dmx": 121, "rgb": [128,128,255] }
+      ]
+    }
+  ]
+}
