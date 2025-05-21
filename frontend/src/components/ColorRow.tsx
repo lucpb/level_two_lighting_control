@@ -21,7 +21,12 @@ const ColorRow: FC<{ headerText: string, CueType: string, ParName: string }> = (
 
   const handleClick = (id: number) => {
     setSelectedColor(id);
-    
+    console.log(JSON.stringify({
+      type: 'setParameter',
+      CueType,
+      ParName,
+      value:   id
+    }));
     webSocket.send(JSON.stringify({
       type: 'setParameter',
       CueType,

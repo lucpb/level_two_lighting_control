@@ -1,13 +1,21 @@
 // CueRow.tsx
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import classNames from 'classnames';
+import { useWebSocket } from '../contexts/WebSocketContext';
 
 
 
 const CueRow: React.FC<{ headerText: string, CueType: string, ParName: string }> = ({ headerText, CueType, ParName }) => {
+  const webSocket = useWebSocket();
 
   const [cuesDisabled, setCuesDisabled] = useState<boolean>(false);
-  const [activeCue, setActiveCue] = useState<number | null>(null);
+  const [activeCue, setActiveCue] = useState<number>(0);
+
+  useEffect(() => {
+    const payload = { type:'setParameter', CueType, ParName, value: activeCue };
+    console.log('sending from effect', payload);
+    webSocket.send(JSON.stringify(payload));
+  }, [activeCue, CueType, ParName, webSocket]);
 
   return (
     <div className="flex items-center space-x-2 mt-2">
@@ -15,7 +23,7 @@ const CueRow: React.FC<{ headerText: string, CueType: string, ParName: string }>
       {[1, 2, 3, 4, 5].map(cue => (
         <button
           key={cue}
-          onClick={() => !cuesDisabled && cue === activeCue ? setActiveCue(null) : setActiveCue(cue)} // is the same button being clicked?
+          onClick={() => setActiveCue(cue != activeCue ? cue : 0)}
           disabled={cuesDisabled}
           className={classNames(
             activeCue === cue ? "border-yellow-500" : "border-gray-500", // is the button active?
