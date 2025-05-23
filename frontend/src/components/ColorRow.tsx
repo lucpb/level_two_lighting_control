@@ -37,7 +37,7 @@ const ColorRow: FC<{ headerText: string, CueType: string, ParName: string }> = (
 
   return (
     <div className="flex items-center space-x-3 mt-2">
-      <span className="w-32 text-white text-sm">{headerText}</span>
+      <span className="w-32 text-gray-400 text-sm">{headerText}</span>
       {primaryColors.map(color => (
         <button
         key={color.id} 

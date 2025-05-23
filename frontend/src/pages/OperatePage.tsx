@@ -66,12 +66,12 @@ const sections: Section[] = [
 
 export default function OperatePage() {
   return (
-    <div className="p-4 text-white bg-gray-950 min-h-screen divide-y divide-gray-700">
+    <div className="p-4 text-gray-400 bg-zinc-900 min-h-screen divide-y divide-gray-800">
       <h1 className="text-2xl font-bold pb-4">Static Colors &amp; Cues</h1>
 
       {sections.map(section => (
         <section key={section.title} className="py-4 space-y-2">
-          <h2 className="text-xl font-semibold border-b border-gray-700 pb-1">
+          <h2 className="text-xl font-semibold border-b border-gray-800 pb-1">
             {section.title}
           </h2>
 
